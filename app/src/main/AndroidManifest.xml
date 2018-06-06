@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.leo.kotlin_1">
+
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity
+            android:name=".MyActivity"
+            android:label="Kotlin測試">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="com.example.leo.active.SECOND_ACTIVITY" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".SecondActivity"
+            android:label="檔案文件讀取">
+            <intent-filter>
+                <action android:name="com.example.leo.active.SECOND_ACTIVITY" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="com.example.leo.category.SECOND_ACTIVITY" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".WebActivity"
+            android:label="網路存取" />
+        <activity
+            android:name=".MainActivity"
+            android:label="@string/title_activity_main"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".ChooseAreaFragment"
+            android:label="@string/title_activity_choose_area_fragment"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity android:name=".WeatherActivity"></activity>
+    </application>
+
+</manifest>
